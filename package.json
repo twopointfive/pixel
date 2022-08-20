@@ -4,7 +4,6 @@
   "description": "",
   "source": "pixel.js",
   "main": "dist/pixel.js",
-  "browserslist": "> 0.01%, last 2 versions, not dead",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build"
@@ -19,12 +18,17 @@
     "url": "https://github.com/twopointfive/pixel/issues"
   },
   "targets": {
-    "main": {
+    "pixel": {
+      "engines": {
+        "browsers": "> 0.01%, last 2 versions, not dead"
+      },
       "context": "browser",
       "optimize": true,
       "sourceMap": false,
       "source": "pixel.js",
-      "distDir": "dist"
+      "distDir": "dist",
+      "scopeHoist": true,
+      "isLibrary": false
     }
   },
   "homepage": "https://github.com/twopointfive/pixel#readme",
