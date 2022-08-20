@@ -119,3 +119,4 @@ dev-list
 
 # Ignore local files for scripts
 src/*.txt
+.parcel-cache

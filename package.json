@@ -2,9 +2,12 @@
   "name": "pixel",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "pixel.js",
+  "main": "dist/pixel.js",
+  "browserslist": "> 0.01%, last 2 versions, not dead",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,17 @@
   "bugs": {
     "url": "https://github.com/twopointfive/pixel/issues"
   },
-  "homepage": "https://github.com/twopointfive/pixel#readme"
+  "targets": {
+    "main": {
+      "context": "browser",
+      "optimize": true,
+      "sourceMap": false,
+      "source": "pixel.js",
+      "distDir": "dist"
+    }
+  },
+  "homepage": "https://github.com/twopointfive/pixel#readme",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
 }
