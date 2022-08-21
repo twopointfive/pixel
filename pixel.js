@@ -1,5 +1,4 @@
 (function(cookieKey, urlKey, w, d){
-  w.addEventListener('DOMContentLoaded', function (event) {
     const url = new URL(location.href);
 
     let id = url.searchParams.get(urlKey);
@@ -26,5 +25,4 @@
       img.onload = img.onerror = function(){};
       img.src = 'https://r.5.dev/track?' + Date.now() + '&event=' + event + '&uid=' + id;
     }
-  });
 })('25uid', 'utm_25uid', window, document);
