@@ -24,7 +24,7 @@
       seen[idempotency] = true;
       const img = new Image();
       img.onload = img.onerror = function(){};
-      img.src = 'https://redirect.5.dev/track?' + Date.now() + '&event=' + event + '&uid=' + id;
+      img.src = 'https://r.5.dev/track?' + Date.now() + '&event=' + event + '&uid=' + id;
     }
   });
 })('25uid', 'utm_25uid', window, document);
