@@ -29,6 +29,18 @@
       "distDir": "dist",
       "scopeHoist": true,
       "isLibrary": false
+    },
+    "inline": {
+      "engines": {
+        "browsers": "> 0.01%, last 2 versions, not dead"
+      },
+      "context": "browser",
+      "optimize": true,
+      "sourceMap": false,
+      "source": "inline.js",
+      "distDir": "dist",
+      "scopeHoist": true,
+      "isLibrary": false
     }
   },
   "homepage": "https://github.com/twopointfive/pixel#readme",

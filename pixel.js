@@ -17,6 +17,8 @@
     }
 
     const seen = {};
+    // Save existing queued conversions if any
+    const queue = (w.twofiveconversion && w.twofiveconversion.queue) ? w.twofiveconversion.queue : [];
     w.twofiveconversion = function twofiveconversions(event) {
       const idempotency = event + id;
       if (seen[idempotency]) return;
@@ -25,4 +27,8 @@
       img.onload = img.onerror = function(){};
       img.src = 'https://r.5.dev/track?' + Date.now() + '&event=' + event + '&uid=' + id;
     }
+    // Apply queued conversion tracks
+    queue.forEach((args) => {
+      w.twofiveconversion.apply(null, args);
+    })
 })('25uid', 'utm_25uid', window, document);
