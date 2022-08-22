@@ -1,1 +1,1 @@
-!function(){var n,i;window.twofiveconversion=(i=function(){n.push([].slice.call(arguments))},i.queue=n=[],i)}();
+!function(){var e,n;window.twofiveconversion=(n=function(){e.push([].slice.call(arguments))},n.queue=e=[],n);var i=document.createElement("script");i.onload=function(){},i.src="https://pixel.5.dev/dist/pixel.js",document.head.appendChild(i)}();
