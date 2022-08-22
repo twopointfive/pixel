@@ -25,7 +25,7 @@
       seen[idempotency] = true;
       const img = new Image();
       img.onload = img.onerror = function(){};
-      img.src = 'https://r.5.dev/track?' + Date.now() + '&event=' + (event || 'default') + '&uid=' + id;
+      img.src = 'https://r.5.dev/track?' + Date.now() + '&event=' + (event || 'default') + '&uid=' + id+ '&url=' + encodeURIComponent(location.href);
     }
     // Apply queued conversion tracks
     queue.forEach((args) => {
